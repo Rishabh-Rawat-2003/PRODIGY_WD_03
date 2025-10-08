@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic‑Tac‑Toe — Prodigy WD 03</title>
+  <meta name="description" content="Tic-Tac-Toe web app with Human vs Human and Human vs Computer (minimax) modes." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Tic‑Tac‑Toe</h1>
+    <p class="subtitle">PRODIGY_WD_03 — Vanilla JS • Responsive • Accessible</p>
+  </header>
+
+  <main class="container">
+    <section class="panel settings">
+      <div class="row">
+        <label for="mode">Mode:</label>
+        <select id="mode" aria-label="Game mode">
+          <option value="human">Player vs Player</option>
+          <option value="ai">Player vs Computer (O)</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <span>Current Turn: <strong id="turn">X</strong></span>
+        <span class="status" id="status">Make your move!</span>
+      </div>
+    </section>
+
+    <section class="board panel" role="grid" aria-label="Tic Tac Toe Board">
+      <!-- 9 cells -->
+      <button class="cell" aria-label="Cell 1" data-index="0"></button>
+      <button class="cell" aria-label="Cell 2" data-index="1"></button>
+      <button class="cell" aria-label="Cell 3" data-index="2"></button>
+      <button class="cell" aria-label="Cell 4" data-index="3"></button>
+      <button class="cell" aria-label="Cell 5" data-index="4"></button>
+      <button class="cell" aria-label="Cell 6" data-index="5"></button>
+      <button class="cell" aria-label="Cell 7" data-index="6"></button>
+      <button class="cell" aria-label="Cell 8" data-index="7"></button>
+      <button class="cell" aria-label="Cell 9" data-index="8"></button>
+    </section>
+
+    <section class="panel scoreboard">
+      <h2>Score</h2>
+      <div class="scores">
+        <div class="score">
+          <span>Player X</span>
+          <strong id="scoreX">0</strong>
+        </div>
+        <div class="score">
+          <span>Player O</span>
+          <strong id="scoreO">0</strong>
+        </div>
+        <div class="score">
+          <span>Draws</span>
+          <strong id="scoreD">0</strong>
+        </div>
+      </div>
+      <div class="actions">
+        <button id="newGame" class="btn btn-primary" aria-label="Start new round">New Game</button>
+        <button id="resetAll" class="btn" aria-label="Reset scores and board">Reset Scores</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Prodigy WD • Task 03</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
